@@ -691,8 +691,8 @@ video {
   width: 1rem;
 }
 
-.w-\[600px\] {
-  width: 600px;
+.w-\[410px\] {
+  width: 410px;
 }
 
 .w-\[95\%\] {
@@ -714,18 +714,6 @@ video {
 
 .flex-1 {
   flex: 1 1 0%;
-}
-
-.flex-none {
-  flex: none;
-}
-
-.flex-shrink-0 {
-  flex-shrink: 0;
-}
-
-.flex-grow-0 {
-  flex-grow: 0;
 }
 
 .-translate-x-1\/2 {
@@ -1038,6 +1026,10 @@ video {
   padding-right: 5rem;
 }
 
+.pr-5 {
+  padding-right: 1.25rem;
+}
+
 .pr-6 {
   padding-right: 1.5rem;
 }
@@ -1066,6 +1058,10 @@ video {
   font-size: 0.9rem;
 }
 
+.text-\[1\.05rem\] {
+  font-size: 1.05rem;
+}
+
 .text-\[1\.1rem\] {
   font-size: 1.1rem;
 }
@@ -1084,14 +1080,6 @@ video {
 
 .text-\[3\.5rem\] {
   font-size: 3.5rem;
-}
-
-.text-\[5\.5rem\] {
-  font-size: 5.5rem;
-}
-
-.text-\[1\.05rem\] {
-  font-size: 1.05rem;
 }
 
 .font-bold {
@@ -1151,6 +1139,17 @@ video {
 
 .duration-375 {
   transition-duration: 375ms;
+}
+
+/* For testing purposes only */
+
+*{
+  outline: 1px solid red;
+}
+
+a, p, h1, h2, h3, h4, h5, h6 {
+  width: -moz-fit-content;
+  width: fit-content;
 }
 
 /* Custom font */
@@ -1476,5 +1475,71 @@ input[type="number"]:not(:in-range){
 @media (min-width: 768px) {
   .md\:flex-row {
     flex-direction: row;
+  }
+
+  .md\:text-\[2\.75rem\] {
+    font-size: 2.75rem;
+  }
+
+  .md\:text-\[0\.5rem\] {
+    font-size: 0.5rem;
+  }
+
+  .md\:text-\[0\.65rem\] {
+    font-size: 0.65rem;
+  }
+
+  .md\:text-\[0\.85rem\] {
+    font-size: 0.85rem;
+  }
+}
+
+@media (min-width: 992px) {
+  .lg\:flex-row {
+    flex-direction: row;
+  }
+
+  .lg\:items-start {
+    align-items: flex-start;
+  }
+
+  .lg\:text-\[3\.5rem\] {
+    font-size: 3.5rem;
+  }
+
+  .lg\:text-\[0\.75rem\] {
+    font-size: 0.75rem;
+  }
+
+  .lg\:text-\[0\.85rem\] {
+    font-size: 0.85rem;
+  }
+
+  .lg\:text-\[0\.rem\] {
+    color: 0.rem;
+  }
+}
+
+@media (min-width: 1024px) {
+  .xl\:text-\[4\.5rem\] {
+    font-size: 4.5rem;
+  }
+
+  .xl\:text-\[1rem\] {
+    font-size: 1rem;
+  }
+}
+
+@media (min-width: 1200px) {
+  .\32xl\:text-\[5\.5rem\] {
+    font-size: 5.5rem;
+  }
+
+  .\32xl\:text-\[1\.2rem\] {
+    font-size: 1.2rem;
+  }
+
+  .\32xl\:text-\[1\.25rem\] {
+    font-size: 1.25rem;
   }
 }
