@@ -1,14 +1,7 @@
-import fluid, {extract, screens, fontSize} from 'fluid-tailwind'
 /** @type {import('tailwindcss').Config} */
-
 module.exports = {
-  content: {
-    files: ["./*.html", "./*.js"],
-    extract
-  },
+  content: ["./*.html", "./*.js"],
   theme: {
-    screens,
-    fontSize,
     extend: {
       screens: {
         "sm": "320px",
@@ -45,7 +38,6 @@ module.exports = {
     function ({ addVariant }) {
       addVariant('child', '& > *');
       addVariant('child-hover', '& > *:hover');
-    },
-    fluid
+    }
   ],
 }
