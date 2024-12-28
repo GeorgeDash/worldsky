@@ -703,6 +703,10 @@ video {
   width: calc(50% - 16px);
 }
 
+.w-auto {
+  width: auto;
+}
+
 .w-fit {
   width: -moz-fit-content;
   width: fit-content;
@@ -712,8 +716,12 @@ video {
   width: 100%;
 }
 
-.w-auto {
-  width: auto;
+.w-2\/3 {
+  width: 66.666667%;
+}
+
+.w-3\/4 {
+  width: 75%;
 }
 
 .flex-1 {
@@ -744,10 +752,6 @@ video {
 
 .items-center {
   align-items: center;
-}
-
-.justify-start {
-  justify-content: flex-start;
 }
 
 .justify-end {
@@ -824,10 +828,6 @@ video {
   --tw-space-y-reverse: 0;
   margin-top: calc(2rem * calc(1 - var(--tw-space-y-reverse)));
   margin-bottom: calc(2rem * var(--tw-space-y-reverse));
-}
-
-.justify-self-center {
-  justify-self: center;
 }
 
 .overflow-x-hidden {
@@ -959,6 +959,11 @@ video {
 .px-6 {
   padding-left: 1.5rem;
   padding-right: 1.5rem;
+}
+
+.py-1 {
+  padding-top: 0.25rem;
+  padding-bottom: 0.25rem;
 }
 
 .py-1\.5 {
@@ -1147,6 +1152,11 @@ video {
 
 .duration-375 {
   transition-duration: 375ms;
+}
+
+.\~text-xs\/8xl {
+  font-size: clamp(0.75rem,-0.75rem + 7.5vw,6rem)/* fluid type from 0.75rem at 20rem to 6rem at 90rem */;
+  line-height: clamp(1rem,-0.43rem + 7.14vw,6rem)/* fluid from 1rem at 20rem to 6rem at 90rem */;
 }
 
 /* For testing purposes only */
@@ -1436,6 +1446,26 @@ input[type="number"]:not(:in-range){
   width: 100%;
 }
 
+.\~sm\/3xl\:\~text-xs\/xl {
+  font-size: clamp(0.75rem,0.61rem + 0.71vw,1.25rem)/* fluid type from 0.75rem at 20rem to 1.25rem at 90rem */;
+  line-height: clamp(1rem,0.79rem + 1.07vw,1.75rem)/* fluid from 1rem at 20rem to 1.75rem at 90rem */;
+}
+
+.\~sm\/3xl\:\~text-xs\/9xl {
+  font-size: clamp(0.75rem,-1.32rem + 10.36vw,8rem)/* fluid type from 0.75rem at 20rem to 8rem at 90rem */;
+  line-height: clamp(1rem,-1rem + 10vw,8rem)/* fluid from 1rem at 20rem to 8rem at 90rem */;
+}
+
+.\~sm\/3xl\:\~text-xs\/7xl {
+  font-size: clamp(0.75rem,-0.32rem + 5.36vw,4.5rem)/* fluid type from 0.75rem at 20rem to 4.5rem at 90rem */;
+  line-height: clamp(1rem,0rem + 5vw,4.5rem)/* fluid from 1rem at 20rem to 4.5rem at 90rem */;
+}
+
+.\~sm\/3xl\:\~text-xs\/8xl {
+  font-size: clamp(0.75rem,-0.75rem + 7.5vw,6rem)/* fluid type from 0.75rem at 20rem to 6rem at 90rem */;
+  line-height: clamp(1rem,-0.43rem + 7.14vw,6rem)/* fluid from 1rem at 20rem to 6rem at 90rem */;
+}
+
 .child\:rounded-full > * {
   border-radius: 9999px;
 }
@@ -1474,59 +1504,30 @@ input[type="number"]:not(:in-range){
   color: rgb(0 0 0 / var(--tw-text-opacity, 1));
 }
 
-@media (min-width: 768px) {
+@media (min-width: 48rem) {
   .md\:text-\[13\.6px\] {
     font-size: 13.6px;
   }
-
-  .md\:text-\[44px\] {
-    font-size: 44px;
-  }
 }
 
-@media (min-width: 992px) {
-  .lg\:w-fit {
-    width: -moz-fit-content;
-    width: fit-content;
-  }
-
+@media (min-width: 62rem) {
   .lg\:flex-row {
     flex-direction: row;
-  }
-
-  .lg\:flex-col {
-    flex-direction: column;
   }
 
   .lg\:items-start {
     align-items: flex-start;
   }
-
-  .lg\:justify-start {
-    justify-content: flex-start;
-  }
-
-  .lg\:text-\[56px\] {
-    font-size: 56px;
-  }
 }
 
-@media (min-width: 1024px) {
+@media (min-width: 64rem) {
   .xl\:text-\[16px\] {
     font-size: 16px;
   }
-
-  .xl\:text-\[72px\] {
-    font-size: 72px;
-  }
 }
 
-@media (min-width: 1200px) {
+@media (min-width: 75rem) {
   .\32xl\:text-\[20px\] {
     font-size: 20px;
-  }
-
-  .\32xl\:text-\[88px\] {
-    font-size: 88px;
   }
 }

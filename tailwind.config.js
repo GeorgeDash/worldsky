@@ -1,18 +1,26 @@
 /** @type {import('tailwindcss').Config} */
+import fluid, {extract, screens, fontSize} from 'fluid-tailwind'
+
+
 module.exports = {
-  content: ["./*.html", "./*.js"],
+  content: {
+    files: ["./*.html", "./*.js"],
+    extract
+  },
   theme: {
+    screens,
+    fontSize,
     extend: {
       screens: {
-        "sm": "320px",
-        "sm-m": "375px",
-        "sm-l": "425px",
-        "sm-xl": "576px",
-        "md": "768px",
-        "lg": "992px",
-        "xl": "1024px",
-        "2xl": "1200px",
-        "3xl": "1440px"
+        "sm": "20rem",
+        "sm-m": "23.4375rem",
+        "sm-l": "26.5625rem",
+        "sm-xl": "36rem",
+        "md": "48rem",
+        "lg": "62rem",
+        "xl": "64rem",
+        "2xl": "75rem",
+        "3xl": "90rem"
       },
       colors: {
         "beige": "#c2b8b5"
@@ -35,6 +43,9 @@ module.exports = {
     },
   },
   plugins: [
+    fluid({
+      checkSC144: false
+    }),
     function ({ addVariant }) {
       addVariant('child', '& > *');
       addVariant('child-hover', '& > *:hover');
